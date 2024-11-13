@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std ; 
+int main () {
+    int largo , ancho  ; 
+    float piesCuadrados; 
+    cout << "Por favor coloque el largo: " ;
+    cin >> largo ;
+    cout << "Por favor coloque el ancho: " ;
+    cin >> ancho ;
+    piesCuadrados = largo * ancho ; 
+    cout << "Este espacio tiene "<< piesCuadrados <<" pies cuadrados."<< endl ; 
+    int BTU = piesCuadrados * 90; 
+    cout << "El aire correcto para este espacio seria de: " << BTU << " BTU" ; 
+    return 0 ;
+}
