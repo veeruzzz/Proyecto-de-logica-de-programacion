@@ -1,15 +1,59 @@
 #include <iostream>
 using namespace std ; 
+/*  Iander O Santiago Figueroa  Y00649994
+    Gabriel Lopez Concepcion    Y00647786
+    Abdiel Aviles Negron        Y00
+*/
 int main () {
-    int largo , ancho  ; 
+
+    char opcion;
+     int largo , ancho  ; 
+    int BTU;
     float piesCuadrados; 
+    cout << "Hola, que desea hacer?  \n";
+    cout<< "1-Calcular los BTU de un aire con el largo y ancho.\n2-Salir\nRespuesta: ";
+    cin>> opcion;
+    
+ while(opcion == '1') {
+   switch(opcion){
+        case '1':
+        
     cout << "Por favor coloque el largo: " ;
     cin >> largo ;
     cout << "Por favor coloque el ancho: " ;
     cin >> ancho ;
     piesCuadrados = largo * ancho ; 
     cout << "Este espacio tiene "<< piesCuadrados <<" pies cuadrados."<< endl ; 
-    int BTU = piesCuadrados * 90; 
-    cout << "El aire correcto para este espacio seria de: " << BTU << " BTU" ; 
+    BTU = piesCuadrados * 90; 
+    cout << "El aire correcto para este espacio seria de: " << BTU << " BTU" ;
+        break;
+       
+    }
+    
+       if(BTU <= 11999){
+        cout<< "\nHola";
+       }
+       else if(BTU  == 12000 || BTU < 12999){
+        cout<< "\nHola2";
+       }
+       else if(BTU == 13000 || BTU < 18999){
+        cout<< "\nHola3";
+       }
+        else if(BTU >= 19000 || BTU < 24999){
+        cout << "\nHola4";
+       }
+       cout<< "\n--------------------------------\n";
+        cout << "Hola, que desea hacer?  \n";
+    cout<< "1-Calcular los BTU de un aire con el largo y ancho.\n2-Salir\nRespuesta: ";
+    cin>> opcion;
+            
+            switch(opcion) {
+            case '2':
+             cout<< "¡Gracias por utilizar el programa!" ;
+            break; 
+            default:
+            cout << "Seleccion incorrecta por favor ingrese de nuevo";
+            }
+   }
     return 0 ;
 }
