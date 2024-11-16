@@ -1,0 +1,166 @@
+#include <iostream>
+using namespace std;
+/*  Iander O Santiago Figueroa  Y00649994
+    Gabriel Lopez Concepcion    Y00647786
+    Abdiel Aviles Negron        Y00
+*/
+int main () {
+    int largo , ancho  ; 
+    char opcion;
+    int BTU;
+    float piesCuadrados; 
+    cout << "Hola, que desea hacer?  \n";
+    cout<< "1-Calcular los BTU de un aire con el largo y ancho.\n2-Salir\nRespuesta: ";
+    cin>> opcion;
+    
+ while(opcion == '1') {
+   switch(opcion){
+        case '1':
+        
+    cout << "Por favor coloque el largo: " ;
+    cin >> largo ;
+    cout << "Por favor coloque el ancho: " ;
+    cin >> ancho ;
+    piesCuadrados = largo * ancho ; 
+    cout << "Este espacio tiene "<< piesCuadrados <<" pies cuadrados."<< endl ; 
+    int BTU = piesCuadrados * 90; 
+    cout << "El aire correcto para este espacio seria de: " << BTU << " BTU" ; 
+    BTU = piesCuadrados * 90; 
+    cout << "El aire correcto para este espacio seria de: " << BTU << " BTU" ;
+        break;
+       
+    }
+    
+       if(BTU <= 11999){
+        cout<< "\nHola";
+       }
+       else if(BTU  == 12000 || BTU < 12999){
+        cout<< "\nHola2";
+        
+        cout<< "Aqui tiene unidades de 12,000 BTU."<< '\n';
+     cout<< "Midea MSM-12CRN1"<<'\n';
+     cout<< "Split inverter "<<'\n';
+     cout<< "$220-280 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Ahorro energético, auto-limpieza, silencioso."<<'\n';
+      
+     cout<<'\n';
+     
+     cout<< "LG P12EN"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$300-350 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Inverter Dual, filtro de aire, bajo ruido."<<'\n';
+     cout<<'\n';
+      
+     cout<<'\n';
+     
+     cout<< "Samsung AR12TXHPAWK"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$320-380 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Rápido enfriamiento, filtro de 3 capas, bajo ruido."<<'\n';
+     cout<<'\n';
+      
+     cout<<'\n';
+     
+     cout<< "Fujitsu ASHA12U"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$350-450 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Inverter, refrigerante R32, control remoto inteligente."<<'\n';
+     cout<<'\n';
+     
+       }
+       else if(BTU == 13000 || BTU < 18999){
+        cout<< "\nHola3";
+        
+         cout<< "Aqui tiene unidades de 18,000 BTU."<< '\n';
+     cout<< "LG P18EN"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$400-500 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Filtro de Plasma, modo económico, control remoto."<<'\n';
+     
+      cout<<'\n';
+     
+     cout<< "Mitsubishi Electric MSZ-FH18NA"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$600-700 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Filtro Plasma Quad, control por Wi-Fi, silencioso."<<'\n';
+     cout<<'\n';
+     
+      cout<<'\n';
+     
+     cout<< "Samsung AR18TXHPAWK"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$500-600 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Rápido enfriamiento, filtro de 3 capas, bajo ruido."<<'\n';
+     cout<<'\n';
+     
+      cout<<'\n';
+     
+     cout<< "Fujitsu ASHA18U"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$600-750 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Inverter, refrigerante R32, control remoto, bajo ruido."<<'\n';
+     cout<<'\n';
+       }
+        else if(BTU >= 19000 || BTU < 24999){
+        cout << "\nHola4";
+        
+        cout<< "Aqui tiene unidades de 24,000 BTU."<< '\n';
+     cout<< "Mitsubishi Electric MSZ-GL24NA"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$750-950 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Inverter, filtro Plasma Quad, bajo ruido."<<'\n';
+     
+      cout<<'\n';
+     
+     cout<< "LG Art Cool AC24AHT"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$800-1,100 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Inverter Dual, diseño elegante, filtro Plasma."<<'\n';
+     cout<<'\n';
+     
+      cout<<'\n';
+     
+     cout<< "Samsung AR24TXHPAWK"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$700-900 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Rápido enfriamiento, filtro de 3 capas, bajo ruido."<<'\n';
+     cout<<'\n';
+     
+      cout<<'\n';
+     
+     cout<< "Fujitsu ASHA24U"<<'\n';
+     cout<< "Split Inverter"<<'\n';
+     cout<< "$850-1,200 USD"<<'\n';
+     cout<< "Caracteristicas Destacadas:"<< '\n';
+     cout<<"Inverter, refrigerante R32, control remoto inteligente."<<'\n';
+     cout<<'\n';
+     
+       }
+       cout<< "\n--------------------------------\n";
+        cout << "Hola, que desea hacer?  \n";
+    cout<< "1-Calcular los BTU de un aire con el largo y ancho.\n2-Salir\nRespuesta: ";
+    cin>> opcion;
+            
+            switch(opcion) {
+            case '2':
+             cout<< "¡Gracias por utilizar el programa!" ;
+            break; 
+            default:
+            cout << "Seleccion incorrecta por favor ingrese de nuevo";
+            }
+   }
+    
+    
+    return 0 ;
+}
