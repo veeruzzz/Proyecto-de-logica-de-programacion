@@ -1,0 +1,178 @@
+#include <iostream>
+#include <windows.h>
+#define color SetConsoleTextAttribute
+using namespace std;
+
+int main() {
+     HANDLE hConsole = GetStdHandle( STD_OUTPUT_HANDLE );
+    int largo, ancho;
+    int opcion;
+    int BTU;
+    float piesCuadrados;
+    const int calculo = 90;
+    string informacion [96] = {"Aqui tiene unidades de 9,000 BTU.", "Samsung AR09TXHQASINEA", "Split Inverter ", "$250-350 USD", "Caracteristicas Destacadas:", "Inverter, rápido enfriamiento, purificación de aire.",
+     "\n--------------------------------\n",
+     "Midea MSM-09CRN1",
+     "Split",
+      "$220-280 USD",
+      "Caracteristicas Destacadas:",
+     "Ahorro energético, auto-limpieza, económico.",
+     "\n--------------------------------\n",
+     "LG P09EN",
+     "Split Inverter",
+      "$300-400 USD",
+      "Caracteristicas Destacadas:",
+     "Inverter, filtro plasma, refrigeracion rapida.",
+     "\n--------------------------------\n",
+       "Fujitsu ASHA09U",
+       "Split Inverter",
+      "$350-450 USD",
+      "Caracteristicas Destacadas:",
+     "Inverter, control remoto, bajo ruido.",// aqui termina los 9,000
+     "Aqui tiene unidades de 12,000 BTU.",
+     "Midea MSM-12CRN1",
+     "Split inverter ",
+      "$220-280 USD",
+      "Caracteristicas Destacadas:",
+     "Ahorro energético, auto-limpieza, silencioso.",
+     "\n--------------------------------\n",
+     "LG P12EN",
+     "Split Inverter",
+     "$300-350 USD",
+     "Caracteristicas Destacadas:",
+     "Inverter Dual, filtro de aire, bajo ruido.",
+     "\n--------------------------------\n",
+     "Samsung AR12TXHPAWK",
+     "Split Inverter",
+     "$320-380 USD",
+     "Caracteristicas Destacadas:",
+     "Rápido enfriamiento, filtro de 3 capas, bajo ruido.",
+     "\n--------------------------------\n",
+     "Fujitsu ASHA12U",
+      "Split Inverter",
+      "$350-450 USD",
+      "Caracteristicas Destacadas:",
+     "Inverter, refrigerante R32, control remoto inteligente.",
+     "Aqui tiene unidades de 18,000 BTU.",//Empiezan las 18000
+     "LG P18EN",
+     "Split Inverter",
+     "$400-500 USD",
+     "Caracteristicas Destacadas:",
+     "Filtro de Plasma, modo económico, control remoto.",
+     "\n--------------------------------\n",
+     "Mitsubishi Electric MSZ-FH18NA,",
+      "Split Inverter",
+      "$600-700 USD",
+      "Caracteristicas Destacadas:",
+     "Filtro Plasma Quad, control por Wi-Fi, silencioso.",
+     "\n--------------------------------\n",
+     "Samsung AR18TXHPAWK",
+     "Split Inverter",
+     "$500-600 USD",
+     "Caracteristicas Destacadas:",
+     "Rápido enfriamiento, filtro de 3 capas, bajo ruido.",
+     "\n--------------------------------\n",
+      "Fujitsu ASHA18U",
+     "Split Inverter",
+     "$600-750 USD",
+     "Caracteristicas Destacadas:",
+     "Inverter, refrigerante R32, control remoto, bajo ruido.",
+      "Aqui tiene unidades de 24,000 BTU.", //Empiezan las 24000
+     "Mitsubishi Electric MSZ-GL24NA",
+     "Split Inverter",
+     "$750-950 USD",
+     "Caracteristicas Destacadas:",
+     "Inverter, filtro Plasma Quad, bajo ruido.",
+     "\n--------------------------------\n",
+      "LG Art Cool AC24AHT",
+      "Split Inverter",
+     "$800-1,100 USD",
+     "Caracteristicas Destacadas: ",
+     "Inverter Dual, diseño elegante, filtro Plasma.",
+     "\n--------------------------------\n",
+     "Samsung AR24TXHPAWK",
+     "Split Inverter",
+     "$700-900 USD",
+     "Caracteristicas Destacadas:",
+     "Rápido enfriamiento, filtro de 3 capas, bajo ruido.",
+     "\n--------------------------------\n",
+     "Fujitsu ASHA24U",
+     "Split Inverter",
+     "$850-1,200 USD",
+     "Caracteristicas Destacadas:",
+     "Inverter, refrigerante R32, control remoto inteligente."   
+};
+     color(hConsole, 5);
+    string name[4] = {        
+        "  _____ _                     _   _    ",
+        "  | __  |_|___ ___ _ _ ___ ___|_|_| |___",
+        "  | __ -| | -_|   | | | -_|   | | . | . |",
+        "  |_____|_|___|_|_| _/|___|_|_|_|___|___|"
+    };
+
+    // Mostrar título
+    for (int i = 0; i < 4; i++) {
+        cout << name[i] << endl;
+    }
+
+    do {
+        // Mostrar menú principal
+        color(hConsole, 7);
+        cout << "Que desea hacer?  \n";
+        cout << "1 - Calcular los BTU de un aire con el largo y ancho.\n2 - Salir\nRespuesta: ";
+        cin >> opcion;
+
+        if (opcion == 2) {
+            color(hConsole, 2);
+            cout << "¡Gracias por utilizar el programa!" << endl;
+            break;
+        } else if (opcion != 1) {
+            color(hConsole, 4);
+            cout << "Seleccion incorrecta. Por favor, intente de nuevo.\n";
+            continue;
+        }
+
+        // Solicitar Medidas
+        color(hConsole, 7);
+        cout << "Por favor coloque el largo: ";
+        cin >> largo;
+        cout << "Por favor coloque el ancho: ";
+        cin >> ancho;
+        if (largo <= 0 || ancho <=0){
+             color(hConsole, 4);
+           cout<< "Informacion incorrecta, Por favor, intente de nuevo.\n";
+           continue ; 
+     }
+        // Calcular BTU
+        piesCuadrados = largo * ancho;
+         
+        cout << "Este espacio tiene " << piesCuadrados << " pies cuadrados." << endl;
+        BTU = piesCuadrados * calculo;
+       
+        cout << "El aire correcto para este espacio seria de: " << BTU << " BTU\n";
+
+        // Mostrar las opciones según el BTU calculado
+        if (BTU <= 9000) {
+            color(hConsole, 3);
+      for(int i = 0; i < 24; i++){
+        cout<< informacion[i] << endl;
+    } }else if (BTU == 12000 || BTU < 12999) {
+        color(hConsole, 6);
+        for(int i = 24; i < 48; i++) { 
+        cout<< informacion[i] << endl;
+    } }else if (BTU == 13000 || BTU < 18999) {
+        color(hConsole, 1);
+        for(int i = 48; i < 72; i++){
+        cout<< informacion[i] << endl;
+    }} else if (BTU >= 19000 || BTU < 24999) {
+        color(hConsole, 7);
+        for(int i = 72; i < 96; i++){
+        cout<< informacion[i] << endl;
+    }
+    }
+         
+
+    } while (true);
+
+    return 0;
+}
