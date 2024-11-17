@@ -3,7 +3,10 @@
 #include <stdlib.h> 
 #define color SetConsoleTextAttribute
 using namespace std;
-
+/*  Iander O Santiago Figueroa  Y00649994
+    Gabriel Lopez Concepcion    Y00647786
+    Abdiel Aviles Negron        Y00653989
+*/
 int main() {
      HANDLE hConsole = GetStdHandle( STD_OUTPUT_HANDLE ); //Codigo para controlar la consola
      //Declaracion de Variables
